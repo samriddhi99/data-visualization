@@ -5,11 +5,6 @@ def pd_dataframe(csv_file):
     df = pd.read_csv(csv_file)
     return df
 
-
-def pd_dataframe(csv_file):
-    df = pd.read_csv(csv_file)
-    return df
-
 def sort_and_filter(compared: list, df: pd.DataFrame) -> pd.DataFrame:
     """
     Sort and return a DataFrame based on a specified numeric column or columns.
