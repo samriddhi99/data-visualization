@@ -11,7 +11,7 @@ key = os.environ.get('API_KEY')
 palm.configure(api_key=key)
 
 
-def get_summarised_txt(file, columns: list = [], autodetect: bool = True) -> list:
+def get_summarised_txt(df, columns: list = [], autodetect: bool = True) -> list:
     """
     Function to return summarized text
 
@@ -29,7 +29,6 @@ def get_summarised_txt(file, columns: list = [], autodetect: bool = True) -> lis
         If True: LLM autodetects
         If False: User inputs the columns that require a comparision"""
 
-    df = pd_dataframe(file)
     if autodetect:
         columns = auto_select_coloumn(df.columns.to_list())
 
