@@ -74,16 +74,6 @@ def shorten_dataframe_by_uniform_distribution(df, len_of_longest_element_in_colu
     Returns:
     list: A list containing the maximum element length for each column in the DataFrame.
           The list is in the same order as the columns in the DataFrame.
-
-    Example:
-    >>> import pandas as pd
-    >>> data = {'Name': ['Alice', 'Bob', 'Carol', 'David'],
-    ...         'Age': [25, 30, 22, 35],
-    ...         'City': ['New York', 'San Francisco', 'Los Angeles', 'Chicago']}
-    >>> df = pd.DataFrame(data)
-    >>> column_lengths = longest_element_length_in_columns(df)
-    >>> print(column_lengths)
-    [5, 2, 13]
     """
     
     x = 0
