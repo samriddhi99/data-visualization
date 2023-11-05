@@ -5,9 +5,9 @@ import os
 import urllib.request
 from werkzeug.utils import secure_filename
 
-from data_summarization.input_processing import *
-from data_summarization.summarised_txt import *
-from data_summarization.processing import *
+from summarization.input_processing import *
+from summarization.summarised_txt import *
+from summarization.data_processing import *
 
 
 import pandas as pd
