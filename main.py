@@ -1,12 +1,11 @@
 
 from flask import Flask, json, request, jsonify
-from data_summarization.summarised_txt import get_summarised_txt
 import os
 import urllib.request
 from werkzeug.utils import secure_filename
 
 from summarization.input_processing import *
-from summarization.summarised_txt import *
+from summarization.summarized_txt import *
 from summarization.data_processing import *
 
 
