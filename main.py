@@ -1,9 +1,14 @@
+
 from flask import Flask, json, request, jsonify
+from data_summarization.summarised_txt import get_summarised_txt
 import os
 import urllib.request
 from werkzeug.utils import secure_filename
 
-from summarization.summarized_txt import get_summarised_txt
+from data_summarization.input_processing import *
+from data_summarization.summarised_txt import *
+from data_summarization.processing import *
+
 
 import pandas as pd
 import numpy as np
@@ -27,6 +32,8 @@ def allowed_file(filename):
 @app.route("/")
 def main():
     return "Homepage"
+
+
 @app.route("/upload", methods=["POST"])
 def upload_file():
     # check if the post request has the file part
